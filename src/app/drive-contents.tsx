@@ -1,13 +1,13 @@
 import { Upload, ChevronRight } from "lucide-react";
 import { Button } from "~/components/ui/button";
 import { FileRow, FolderRow } from "./file-row";
-import type { files, folders } from "~/server/db/schema";
+import type { file_table, folder_table } from "~/server/db/schema";
 import Link from "next/link";
 
 export default function DriveContents(props: {
-  files: (typeof files.$inferSelect)[];
-  folders: (typeof folders.$inferSelect)[];
-  parents: (typeof folders.$inferSelect)[];
+  files: (typeof file_table.$inferSelect)[];
+  folders: (typeof folder_table.$inferSelect)[];
+  parents: (typeof folder_table.$inferSelect)[];
 }) {
   const { files, folders, parents } = props;
 
